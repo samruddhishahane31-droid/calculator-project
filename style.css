@@ -1,22 +1,25 @@
+/* Light gradient background */
 body {
     margin: 0;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #fce4ec, #e3f2fd);
 }
 
+/* Glass calculator */
 .calculator {
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.6);
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
+/* Display */
 #display {
     width: 100%;
     height: 70px;
@@ -27,47 +30,56 @@ body {
     font-size: 28px;
     padding: 10px;
     text-align: right;
-    background: rgba(0,0,0,0.6);
-    color: #00ffcc;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+    background: rgba(255, 255, 255, 0.7);
+    color: #333;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Buttons grid */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 70px);
     gap: 15px;
 }
 
+/* Buttons */
 button {
     height: 65px;
     border: none;
     border-radius: 15px;
     font-size: 18px;
-    color: white;
+    color: #333;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
     transition: all 0.2s ease;
 }
 
+/* Hover */
 button:hover {
     transform: translateY(-3px);
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.9);
 }
 
+/* Click */
 button:active {
     transform: scale(0.95);
 }
 
+/* Equal button */
 .equal {
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: white;
     font-weight: bold;
 }
 
+/* Zero button */
 .zero {
     grid-column: span 2;
 }
 
+/* Operator buttons */
 button:nth-child(4n) {
-    color: #00ffd5;
+    color: #0077b6;
     font-weight: bold;
 }
